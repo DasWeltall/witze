@@ -36,6 +36,24 @@
         p {
             color: #666;
         }
+
+        button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -45,17 +63,27 @@
         <div class="joke">
             <p id="jokeText">Witz wird hier angezeigt...</p>
         </div>
+        <button id="nextButton">Nächster Witz</button>
     </div>
     <script>
         const jokes = [
             "Warum hat das Huhn die Straße überquert? Um auf die andere Seite zu gelangen!",
             "Warum hat der Mathematikbuch weinen müssen? Weil es zu viele Probleme hatte!",
-            // Hier weitere Witze hinzufügen...
+            // Weitere Witze hier einfügen...
         ];
 
         const jokeText = document.getElementById('jokeText');
-        const randomIndex = Math.floor(Math.random() * jokes.length);
-        jokeText.textContent = jokes[randomIndex];
+        const nextButton = document.getElementById('nextButton');
+
+        function showNextJoke() {
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            jokeText.textContent = jokes[randomIndex];
+        }
+
+        nextButton.addEventListener('click', showNextJoke);
+
+        // Ersten Witz anzeigen
+        showNextJoke();
     </script>
 </body>
 </html>
