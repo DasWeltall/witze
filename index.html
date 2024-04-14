@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .joke {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday!</h1>
+        <p>Alles Gute zum Geburtstag! Hier ist ein Witz für dich:</p>
+        <div class="joke">
+            <p id="jokeText">Witz wird hier angezeigt...</p>
+        </div>
+    </div>
+    <script>
+        const jokes = [
+            "Warum hat das Huhn die Straße überquert? Um auf die andere Seite zu gelangen!",
+            "Warum hat der Mathematikbuch weinen müssen? Weil es zu viele Probleme hatte!",
+            // Hier weitere Witze hinzufügen...
+        ];
+
+        const jokeText = document.getElementById('jokeText');
+        const randomIndex = Math.floor(Math.random() * jokes.length);
+        jokeText.textContent = jokes[randomIndex];
+    </script>
+</body>
+</html>
