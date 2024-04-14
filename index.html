@@ -64,13 +64,68 @@
             <p id="jokeText">Witz wird hier angezeigt...</p>
         </div>
         <button id="nextButton">Nächster Witz</button>
+        <p>These jokes are brought to you by GPT!</p>
     </div>
     <script>
-        const jokes = [
-            "Warum hat das Huhn die Straße überquert? Um auf die andere Seite zu gelangen!",
-            "Warum hat der Mathematikbuch weinen müssen? Weil es zu viele Probleme hatte!",
-            // Weitere Witze hier einfügen...
-        ];
+const jokes = [
+    "Warum hat das Huhn die Straße überquert? Um auf die andere Seite zu gelangen!",
+    "Warum hat der Mathematikbuch weinen müssen? Weil es zu viele Probleme hatte!",
+    "Warum hat der Teddybär keinen Kuchen gegessen? Weil er schon gestopft war!",
+    "Warum hat der Kühlschrank die Tür nicht zugemacht? Weil er dachte, er wäre cool genug!",
+    "Warum hat das Buch keine Freunde? Weil es immer nur seine Seiten zeigt!",
+    "Warum hat die Banane den Affen geärgert? Weil sie so reif war!",
+    "Warum hat der Stift geheult? Weil er so viele Fehler gemacht hat!",
+    "Warum hat der Besen den Job verloren? Weil er sich nicht mehr zusammenkehren konnte!",
+    "Warum hat der Apfel geweint? Weil er geschält wurde!",
+    "Warum hat der Computer Angst? Weil er von einem Virus gehört hat!",
+    "Warum hat die Uhr keine Hände? Weil sie 'aus der Zeit gefallen' ist!",
+    "Warum hat das Licht gebrannt? Weil es zu viele Watts hatte!",
+    "Warum hat die Orange den Apfel ausgelacht? Weil er in der Kompott saß!",
+    "Warum hat die Katze den Brief nicht gelesen? Weil sie keine Miezen hatte!",
+    "Warum hat der Flaschengeist gefangen genommen? Weil er zu viel Alkohol im System hatte!",
+    "Warum hat der Teller mit dem Koch gestritten? Weil er ihm gesagt hat, er wäre zu flach!",
+    "Warum hat der Frosch nicht geflirtet? Weil er Angst hatte, einen Kuss zu bekommen!",
+    "Warum hat der Schuh den Marathon nicht beendet? Weil er abgelaufen war!",
+    "Warum hat das Auto geweint? Weil es eine Hupe hatte!",
+    "Warum hat der Flugzeugpilot einen Kamm genommen? Weil er immer fliegen wollte!",
+    "Warum hat der Baum geblinzelt? Weil er 'Knosper, Knosper, Knäuschen' gehört hat!",
+    "Warum hat der Lehrer den Bleistift scharf gemacht? Weil er dachte, es wäre 'Schule vorbei'!",
+    "Warum hat das Sandwich den Toaster genommen? Weil es gegrillt werden wollte!",
+    "Warum hat die Socke den Schuh gestohlen? Weil sie zu Fuß gehen wollte!",
+    "Warum hat der Bär den Honig nicht gegessen? Weil er Bienenstich hatte!",
+    "Warum hat der Drucker gestreikt? Weil er keine Lust mehr hatte, Papier zu füttern!",
+    "Warum hat der Kaktus gestochen? Weil er dachte, es wäre ein Händedruck!",
+    "Warum hat die Wand keine Freunde? Weil sie zu abweisend ist!",
+    "Warum hat das Telefon den Anruf abgelehnt? Weil es sich nicht mehr 'verbunden' fühlte!",
+    "Warum hat der Keks geweint? Weil er krümelig war!",
+    "Warum hat der Kamel den Halm gebrochen? Weil er den letzten Strohhalm erreicht hat!",
+    "Warum hat der Clown geweint? Weil ihm die Luftballons weggeflogen sind!",
+    "Warum hat der Fisch den Wurm abgelehnt? Weil er nicht im Bilde war!",
+    "Warum hat der Mixer geweint? Weil er gemixt wurde!",
+    "Warum hat der Vogel den Zweig fallen lassen? Weil er keine Zweige hatte!",
+    "Warum hat der Flugzeugpilot rot gesehen? Weil er sich verflogen hatte!",
+    "Warum hat der Kühlschrank gefroren? Weil er überkühlt war!",
+    "Warum hat die Nadel den Ballon gestochen? Weil sie es durchstechen wollte!",
+    "Warum hat die Biene gesungen? Weil sie im Schwarm war!",
+    "Warum hat der Regenbogen geweint? Weil er keine Farben mehr hatte!",
+    "Warum hat das Buch nicht geschlossen? Weil es noch eine Seite offen hatte!",
+    "Warum hat das Motorrad den Helm nicht getragen? Weil es sich frei fühlen wollte!",
+    "Warum hat die Laterne nicht geleuchtet? Weil sie einen Aussetzer hatte!",
+    "Warum hat die Tür den Rahmen verlassen? Weil sie offen war!",
+    "Warum hat das Pferd gewiehert? Weil es gesattelt war!",
+    "Warum hat der Stuhl den Tisch abgelehnt? Weil er nicht darauf sitzen wollte!",
+    "Warum hat der Käse nicht gelacht? Weil er geschmolzen war!",
+    "Warum hat der Koch geweint? Weil er so viele Zwiebeln geschnitten hat!",
+    "Warum hat der Wassertropfen die Wolke verlassen? Weil er zu schwer war!",
+    "Warum hat der Hammer nicht getroffen? Weil er danebengehauen hat!",
+    "Warum hat der Ballon den Spaß verloren? Weil er geplatzt ist!",
+    "Warum hat der Sonnenblumenkern geweint? Weil er im Schatten stand!",
+    "Warum hat das Blatt nicht geweht? Weil es angeheftet war!",
+    "Warum hat die Tasche nicht getragen? Weil sie zu schwer beladen war!",
+    "Warum hat die Wolke nicht geschneit? Weil sie sich nicht kalt fühlte!",
+    "Warum hat der Roboter geweint? Weil er so viele Schrauben locker hatte!",
+    "Warum hat das Lied nicht gespielt? Weil es auf stumm geschaltet war!"
+];
 
         const jokeText = document.getElementById('jokeText');
         const nextButton = document.getElementById('nextButton');
